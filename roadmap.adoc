@@ -1,0 +1,56 @@
+= Color Meanings dataset + API Roadmap
+
+== Data Collection & Scraping
+
+=== Inspect Website
+
+
+***
+
+.Data Collection Steps
+[horizontal]
+1. Examine structure of site and identify HTML elements containing color names, hex codes, descriptions, or other related metadata.
+2. Use Python libraries like Requests and BeautifulSoup (or Scrapy for more complex tasks) to extract data. Check site’s robots.txt and legal terms before scraping.
+3. Clean and standardize data with Pandas. Save it as CSV/JSON or directly into database like SQLite or PostgreSQL.
+
+***
+
+=== Defining and Enhancing Relationships
+
+
+
+====
+
+.Mapping Relationships
+[horizontal]
+* *Containment*: color containing hues of another.
+* *Associations*: thematically-linked (e.g., warm vs. cool, culturally-related, palettes, etc.).
+* *Color Theory*: Complementary, analogous, triadic, etc.
+* *Advanced Analysis*: using libraries like colormath or built-in colorsys to convert between color spaces and calculate similarities or complementary pairings.
+* *Graph Structures*: consider a graph database (like Neo4j)
+
+====
+
+=== API Design & Implementation
+
+***
+
+1. Choose framework: API using FastAPI.
+2. Design endpoints:
+3. Fetch color details:
+** Querying by relationships.
+** Filtering or searching by color properties.
+4. Documentation & Testing: Write clear API documentation and test endpoints with tools like Postman or curl. Containerize Docker.
+
+***
+
+=== Advanced Color Analysis with Python
+
+1. Color Computations: advanced color analytics using:
+** NumPy for numerical computations.
+** Matplotlib for visualizing color distributions and relationships.
+** colormath to handle color conversions and distance calculations.
+2. Visualization: Generate plots to explore your color data and relationships—possibly insightful for understanding trends and patterns.
+
+.Final Thoughts
+Start small: get dataset assembled. Iteratively add API layer and build out the relationship analysis. Use Python libraries and frameworks; they’re there to help you innovate. 

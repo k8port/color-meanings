@@ -1,0 +1,46 @@
+import os
+from pathlib import Path
+
+def print_filepaths():
+    print("-----FILEPATHS-------------------------------------------------------------------------------------")
+    print("current file\t\t\t\t", os.path.abspath(__file__))
+    print("current file path\t\t\t", os.path.dirname(__file__))
+    print("current working directory\t\t", os.getcwd())
+    print("filepath for descriptions.csv\t\t", Path('data/descriptions.csv').resolve())
+    print("filepath for '..'\t\t\t", Path('..').resolve())
+    print("filepath for 'root/'\t\t\t", Path('/').resolve())
+    print("---------------------------------------------------------------------------------------------------\n")
+
+    print("-----ABSOLUTE PATH COMMANDS(os)--------------------------------------------------------------------")
+    print("os absolute path of '..'\t\t", os.path.abspath('..'))
+    print("os absolute path of '/'\t\t\t", os.path.abspath('/'))
+    print("os absolute path of ('descriptions')\t", os.path.abspath('data/descriptions.csv'))
+    print("os absolute path of current file\t", os.path.abspath(__file__))
+    print("---------------------------------------------------------------------------------------------------\n")
+
+    print("-----RELATIVE PATH COMMANDS(os)--------------------------------------------------------------------")
+    print("relpath of descriptions to '/'\t\t", os.path.relpath('data/descriptions.csv', '/'))
+    print("relpath of descriptions to '..'\t\t", os.path.relpath('data/descriptions.csv', '..'))
+    print("relpath of descriptions to current\t", os.path.relpath('data/descriptions.csv', os.path.dirname(__file__)))
+    print("os.path.isabs('/')\t\t\t", os.path.isabs('/'))
+    print("os.path.isabs('..')\t\t\t", os.path.isabs('..'))
+    print("os.path.isabs('data/descriptions.csv')\t", os.path.isabs('data/descriptions.csv'))
+    print("---------------------------------------------------------------------------------------------------\n")
+
+    print("-----PATHLIB PACKAGE FILEPATH COMMANDS----------------------------------------------------------------")
+    print("current file path\t\t\t", Path(__file__).resolve())
+    print("current working directory\t\t", Path.cwd())
+    print("filepath for descriptions.csv\t\t", Path('data/descriptions.csv').resolve())
+    print("filepath for '..'\t\t\t", Path('..').resolve())
+    print("filepath for 'root/'\t\t\t", Path('/').resolve())
+    print("---------------------------------------------------------------------------------------------------\n")
+
+    print("-----ABSOLUTE PATH COMMANDS(pathlib)----------------------------------------------------------------")
+    print("Path('/') absolute?\t\t\t", Path('/').is_absolute())
+    print("Path('..') absolute?\t\t\t", Path('..').is_absolute())
+    print("current file absolute?\t\t\t", Path(__file__).is_absolute())
+    print("data/descriptions.csv absolute?\t\t", Path('data/descriptions.csv').is_absolute())
+    desc_path = Path('data/descriptions.csv').resolve()
+    print("file path of descriptions:\t\t", desc_path)
+    print("is path absolute?\t\t\t", desc_path.is_absolute())
+    print("---------------------------------------------------------------------------------------------------\n")

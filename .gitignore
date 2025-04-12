@@ -1,0 +1,57 @@
+# Python byte-compiled files and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Testing and coverage reports
+.tox/
+.pytest_cache/
+cover/
+htmlcov/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Docker artifacts and environment files
+docker-compose.override.yml
+*.env.local
+*.env
+
+# Neo4j database storage directory (adjust if your data storage location differs)
+data/neo4j/
