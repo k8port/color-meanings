@@ -1,23 +1,16 @@
-import csv
-from neo4j import GraphDatabase
+"""Build the graph and load it into Neo4j in one step.
 
-# Connect to Neo4j
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_USER = "neo4j"
-NEO4J_PASSWORD = "color_meanings"
+    NEO4J_PASSWORD=... python scripts/setup_db.py
+"""
 
-# initialize the driver
-driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+import sys
+from pathlib import Path
 
-def setup_db(csv_file):
-    """
-    Reads color data from CSV and inserts/updates nodes in Neo4j database
-    """
-    with driver.session() as session:
-        with open(csv_file, 'r', newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                # Prepare query to create Color node with properties from CSV
-                color_name = row['color_name']
-                color_value = row['color_value']
-                
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from colorology.__main__ import main as build  # noqa: E402
+from modules.database.neo4j_client import load_graph  # noqa: E402
+
+if __name__ == "__main__":
+    build(["build"])
+    load_graph("graph", wipe=True)

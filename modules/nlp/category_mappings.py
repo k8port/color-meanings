@@ -7,19 +7,19 @@ seasonal_keywords = {
         "cool", 
         "snow", 
         "ice", 
-        "frost"
+        "frost",
         "christmas",
         "hannukah",
         "snowy",
         "snowflake",
         "new year",
-        "new year's eve"
-        "snow day"
+        "new year's eve",
+        "snow day",
         "snowman",
         "blizzard",
         "snowstorm",
         "valentine's",
-        "valentine"
+        "valentine",
         "winter solstice",
     ],
     "spring": [
@@ -58,7 +58,7 @@ seasonal_keywords = {
         "harvest", 
         "ripe", 
         "mature", 
-        "full"
+        "full",
         "thanksgiving",
         "halloween",
         "pumpkin",
@@ -102,7 +102,7 @@ undertone_keywords = [
 aesthetic_keywords = [
     "retro", 
     "vintage",
-    "antique"
+    "antique",
     "modern", 
     "classic", 
     "trendy", 
@@ -119,7 +119,7 @@ aesthetic_keywords = [
     "minimalist",
     "industrial",
     "rustic",
-    "goth"
+    "goth",
     "steampunk",
     "brutalist"
 ]
@@ -153,7 +153,7 @@ historical_era_keywords = [
     "bronze age",
     "stone age",
     "neolithic",
-    "ancient"
+    "ancient",
     "medieval",
     "renaissance",
     "baroque",
