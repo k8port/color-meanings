@@ -1,0 +1,9 @@
+[project]
+name = "colorology"
+version = "0.1.0"
+description = "A graph of 1,400+ named colors and how they relate: perceptual similarity, color harmony, family, and description."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

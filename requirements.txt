@@ -1,11 +1,20 @@
+# graph pipeline
+numpy
+pandas
+matplotlib
+pytest
+
+# Neo4j loader
+neo4j
+python-dotenv
+
+# scraping and NLP
 requests
 beautifulsoup4
 selenium
-pandas
-neo4j
+spacy
+
+# planned API layer
 fastapi
 ariadne # graphql
-spacy
 uvicorn
-python-dotenv
-pytest
